@@ -2,9 +2,10 @@ import { NextResponse } from "next/server";
 import { comparePassword } from '../lib/auth';
 import { Client } from "pg";
 import dotenv from "dotenv";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcrypt'; 
 import jwt from 'jsonwebtoken';
-
+ 
+//hello
 dotenv.config();
 
 const client = new Client({
