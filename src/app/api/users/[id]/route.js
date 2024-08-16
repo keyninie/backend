@@ -12,7 +12,7 @@ export async function GET(request, { params }) {
   const { id } = params;
     try {
       const result = await client.query('SELECT * FROM tbl_users WHERE id = $1', [id]);
-      //return new Response(JSON.stringify({ message: "GET DATA OK"}), {
+      //return new Response(JSON.stringify({ message: "GET DATA OK"}), {    
       return new Response(JSON.stringify(result.rows), {  
         status: 200,
         headers: { 'Access-Control-Allow-Origin': '*', "Content-Type": "application/json" },
